@@ -10,11 +10,13 @@
     "client": "npm run start --prefix client",
     "server": "npm run watch --prefix server",
     "watch": "concurrently \" npm run server\" \"npm run client\" ",
+    "deploy": "npm run build --prefix client && npm run start --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix client"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "morgan": "^1.10.0"
   }
 }
