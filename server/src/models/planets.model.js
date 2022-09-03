@@ -16,6 +16,7 @@ const process = new Promise((resolve, reject)=>{
 });
 
 function loadPlanetsData(){
+    
     return new Promise((resolve, reject )=>{
         fs.createReadStream(path.join(__dirname, '..', '..' ,'data' ,'/kepler_data.csv'))
         .pipe(parse({
@@ -23,6 +24,7 @@ function loadPlanetsData(){
           columns: true,
         }))
         .on('data', async(data) => {
+          
           if (isHabitablePlanet(data)) {
             // habitablePlanets.push(data);
             // TODP insert + update = upsert
