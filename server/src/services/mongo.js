@@ -13,11 +13,12 @@ mongoose.connection.once('error', (err)=>{
 
 async function  mongoConnect(){
     await mongoose.connect(MONGO_URL);
+    return mongoose;
 }
 
 async function mongoDisconnect(){
     // await mongoose.connection.close();
-    await mongoose.connection.close();
+    // await mongoose.connection.close();
     await mongoose.disconnect();
     
 }

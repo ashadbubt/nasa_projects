@@ -23,8 +23,8 @@ describe('Launches API ', () => {
     
     
     afterAll(async () => {
-        // await mongoDisconnect();
-    });
+         await mongoDisconnect();
+      });
     describe('Test POST /launch', ()=>{
         const completeLaunchData = {
             mission: 'USS Enterprise',
