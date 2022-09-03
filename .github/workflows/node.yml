@@ -9,7 +9,7 @@ jobs:
     env:
       CI: true
       PORT: 8000
-      MONGO_DB: mongodb+srv://nasa-api:NkzSjD790i3a3Ei9@nasacluster.ijj1f7i.mongodb.net/nasa?retryWrites=true&w=majority
+      MONGO_DB: mongodb://localhost/nasa
     strategy:
       matrix:
         node-version: [14.x]
